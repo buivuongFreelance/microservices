@@ -88,6 +88,7 @@ services:
       xpack.monitoring.collection.enabled: "true"
       xpack.security.enrollment.enabled: "true"
       xpack.security.authc.token.enabled: "true"
+      ELASTIC_USERNAME: buivuong
       ELASTIC_PASSWORD: buivuong
     ports:
       - 9300:9300
@@ -103,8 +104,8 @@ services:
     restart: no
     environment:
       - ELASTICSEARCH_HOSTS=["http://elasticsearch_container:9200"]
-      # - ELASTICSEARCH_USERNAME=elastic
-      # - ELASTICSEARCH_PASSWORD=buivuong
+      - ELASTICSEARCH_USERNAME=buivuong
+      - ELASTICSEARCH_PASSWORD=buivuong
       - ELASTICSEARCH_SERVICEACCOUNT_TOKEN=AAEAAWVsYXN0aWMva2liYW5hL2pvYmJlci1raWJhbmE6N3BWZ0ItZWxSY21wMEJ0Y3ZKNTlHZw
       - XPACK_FLEET_AGENTS_ELASTICSEARCH_HOSTS=["http://elasticsearch_container:9200"]
     ports:
