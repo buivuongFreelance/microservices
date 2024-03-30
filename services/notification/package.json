@@ -12,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@buivuong/microservices-shared": "^1.0.0",
+    "@elastic/elasticsearch": "^8.10.0",
+    "@microservices-shared/common": "^1.0.2",
     "amqplib": "^0.10.3",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.9",
