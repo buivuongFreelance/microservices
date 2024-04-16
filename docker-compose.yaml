@@ -1,7 +1,7 @@
 #ssh root@165.22.58.22
 #MjMSWu7JJ+#9wN8s
 # docker compose up -d redis mongodb mysql postgres rabbitmq elasticsearch kibana
-version: "3.9"
+version: "3.7"
 services:
   redis:
     container_name: redis_container
@@ -27,13 +27,12 @@ services:
     image: mongo:latest
     restart: always
     environment:
-      - MONGO_INITDB_DATABASE=my-crm
-      - MONGO_INITDB_ROOT_USERNAME=buivuong
-      - MONGO_INITDB_ROOT_PASSWORD=testhehe1
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: testne
     ports:
       - 27017:27017
     volumes:
-      - ./docker-volumes/data:/data/db
+      - mongodb_data_container:/data/db
 
   mysql:
     container_name: mysql_container
@@ -130,6 +129,8 @@ services:
         -E apm-server.kibana.protocol=http
         -E strict.perms=false
         -E apm-server.auth.anonymous.enabled=true
+volumes:
+  mongodb_data_container:
 
   # metricbeat:
   #   container_name: metricbeat_container
