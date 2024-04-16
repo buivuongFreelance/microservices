@@ -6,6 +6,8 @@ import { Application } from "express";
 import http from "http";
 import { healthRoutes } from "./routes";
 import { checkConnection } from "./elasticsearch";
+import { Channel } from "amqplib";
+import { createConnection } from "./queues/connection";
 
 const SERVER_PORT = 4001;
 const log: Logger = winstonLogger(
@@ -22,9 +24,9 @@ export function start(app: Application): void {
 }
 
 async function startQueues(): Promise<void> {
-  //   const emailChannel: Channel = (await createConnection()) as Channel;
-  //   await consumeAuthEmailMessages(emailChannel);
-  //   await consumeOrderEmailMessages(emailChannel);
+  const emailChannel: Channel = (await createConnection()) as Channel;
+  // await consumeAuthEmailMessages(emailChannel);
+  // await consumeOrderEmailMessages(emailChannel);
 }
 
 function startElasticSearch(): void {

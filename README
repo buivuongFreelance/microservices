@@ -1,1 +1,10 @@
  npm create vite@latest job-client --template react-ts
+
+ NGINX
+ must unlink default
+ sudo unlink /etc/nginx/sites-available/default
+ cd /etc/nginx/sites-available
+ touch my-server.config
+ sudo vim /etc/nginx/sites-available/my-server.config
+ sudo ln -s /etc/nginx/sites-available/my-server.config /etc/nginx/sites-enabled/
+ sudo nginx -t
