@@ -27,8 +27,9 @@ services:
     image: mongo:latest
     restart: always
     environment:
+      - MONGO_INITDB_DATABASE=my-crm
       - MONGO_INITDB_ROOT_USERNAME=buivuong
-      - MONGO_INITDB_ROOT_PASSWORD=testhehe001
+      - MONGO_INITDB_ROOT_PASSWORD=testhehe1
     ports:
       - 27017:27017
     volumes:
