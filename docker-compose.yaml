@@ -9,9 +9,9 @@ services:
     restart: always
     ports:
       - "6379:6379"
-    command: redis-server --loglevel warning
+    command: redis-server --save 20 1 --loglevel warning --requirepass testne
     volumes:
-      - ./docker-volumes/cache:/data
+      - redis_data_container:/data
 
   redis-commander:
     container_name: redis-commander
@@ -60,7 +60,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./docker-volumes/postgres:/var/lib/postgresql
+      - postgres_data_container:/var/lib/postgresql
 
   rabbitmq:
     container_name: rabbitmq_container
@@ -131,6 +131,8 @@ services:
         -E apm-server.auth.anonymous.enabled=true
 volumes:
   mongodb_data_container:
+  postgres_data_container:
+  redis_data_container:
 
   # metricbeat:
   #   container_name: metricbeat_container
