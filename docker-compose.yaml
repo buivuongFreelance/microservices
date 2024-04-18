@@ -1,7 +1,7 @@
 #ssh root@165.22.58.22
 #MjMSWu7JJ+#9wN8s
 # docker compose up -d redis mongodb mysql postgres rabbitmq elasticsearch kibana
-version: "3.7"
+version: "3.9"
 services:
   redis:
     container_name: redis_container
@@ -29,6 +29,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: testne
+      MONGO_INITDB_DATABASE: my-crm
     ports:
       - 27017:27017
     volumes:
