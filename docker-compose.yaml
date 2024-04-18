@@ -29,7 +29,6 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: testne
-      MONGO_INITDB_DATABASE: my-crm
     ports:
       - 27017:27017
     volumes:

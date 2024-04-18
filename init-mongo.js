@@ -1,11 +1,10 @@
 db.createUser({
-  user: "buivuong",
-  pwd: "your_password",
+  user: "admin",
+  pwd: "testne",
   roles: [
     {
       role: "readWrite",
-      db: "my_db",
+      db: "my-crm",
     },
   ],
 });
-db.createCollection("test");
