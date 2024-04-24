@@ -1,8 +1,8 @@
 import { winstonLogger } from "@microservices-shared/common";
 import { Logger } from "winston";
-import { config } from "./config";
+import { config } from "@notifications/config";
 import express, { Express } from "express";
-import { start } from "./server";
+import { start } from "@notifications/server";
 
 const log: Logger = winstonLogger(
   `${config.ELASTIC_SEARCH_URL}`,

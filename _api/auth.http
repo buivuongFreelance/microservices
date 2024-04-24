@@ -1,0 +1,15 @@
+@baseUrl = http://localhost:4000
+@urlPath = api/gateway/v1/auth
+
+POST {{baseUrl}}/{{urlPath}}/signup
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+    "username": "test",
+    "email": "test@gmail.com",
+    "password": "123456",
+    "country": "Vietnam",
+    "profilePicture": "https://res.cloudinary.com/deeucfdkq/image/upload/v1713784358/medical-booking/doctor.png"
+}

@@ -1,4 +1,4 @@
-import { config } from "../config";
+import { config } from "@notifications/config";
 import { winstonLogger } from "@microservices-shared/common";
 import client, { Channel, Connection } from "amqplib";
 import { Logger } from "winston";

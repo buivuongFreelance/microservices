@@ -1,6 +1,6 @@
 import { Client } from "@elastic/elasticsearch";
 import { ClusterHealthResponse } from "@elastic/elasticsearch/lib/api/types";
-import { config } from "./config";
+import { config } from "@notifications/config";
 import { winstonLogger } from "@microservices-shared/common";
 import { Logger } from "winston";
 
