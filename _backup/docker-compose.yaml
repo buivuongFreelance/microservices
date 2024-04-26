@@ -14,7 +14,6 @@ services:
   #     - 27017:27017
   #   volumes:
   #     - mongodb_data_container:/data/db
-  #     # - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
 
   mongo_one:
     container_name: mongo_one
@@ -29,6 +28,5 @@ services:
       - mongo_one_data:/data/db
       # - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
 
-networks:
-  elastic:
-    name: elastic
+volumes:
+  mongo_one_data:
