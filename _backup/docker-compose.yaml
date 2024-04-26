@@ -16,8 +16,8 @@ services:
       - mongodb_data_container:/data/db
       # - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
 
-  mongodb1:
-    container_name: mongodb_container_1
+  mongo_one:
+    container_name: mongo_one
     image: mongo:latest
     restart: always
     environment:
@@ -26,7 +26,7 @@ services:
     ports:
       - 27018:27018
     volumes:
-      - mongodb_data_container_1:/data/db
+      - mongo_one_data:/data/db
       # - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
 
 networks:
