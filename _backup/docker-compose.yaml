@@ -3,18 +3,18 @@
 # docker compose up -d mongodb mongodb1
 version: "3.9"
 services:
-  mongodb:
-    container_name: mongodb_container
-    image: mongo:latest
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: testne
-    ports:
-      - 27017:27017
-    volumes:
-      - mongodb_data_container:/data/db
-      # - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+  # mongodb:
+  #   container_name: mongodb_container
+  #   image: mongo:latest
+  #   restart: always
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: testne
+  #   ports:
+  #     - 27017:27017
+  #   volumes:
+  #     - mongodb_data_container:/data/db
+  #     # - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
 
   mongo_one:
     container_name: mongo_one
