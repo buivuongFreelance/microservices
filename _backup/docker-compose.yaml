@@ -23,7 +23,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: testne
     ports:
-      - 27018:27018
+      - 27018:27017
     volumes:
       - mongo_one_data:/data/db
       # - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
