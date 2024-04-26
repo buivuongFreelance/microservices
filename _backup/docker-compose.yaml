@@ -1,6 +1,6 @@
 #ssh root@165.22.58.22
 #MjMSWu7JJ+#9wN8s
-# docker compose up -d mongodb
+# docker compose up -d mongodb mongodb1
 version: "3.9"
 services:
   mongodb:
@@ -17,7 +17,7 @@ services:
       # - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
 
   mongodb1:
-    container_name: mongodb_container
+    container_name: mongodb_container_1
     image: mongo:latest
     restart: always
     environment:
